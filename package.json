@@ -1,47 +1,59 @@
 {
-    "name": "vscode-generate-code",
-    "displayName": "vscode-generate-code",
-    "description": "a tool to generate code",
-	"version": "0.0.1",
-	"publisher": "fengtianru117",
-    "engines": {
-        "vscode": "^1.47.0"
-    },
-    "categories": [
-        "Other"
+  "name": "vscode-generate-code",
+  "displayName": "vscode-generate-code",
+  "description": "a tool to generate code",
+  "version": "0.0.1",
+  "publisher": "fengtianru117",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-generate-code.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-generate-code.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "extension.demo.getCurrentFilePath",
+        "title": "获取当前文件(夹)路径"
+      }
     ],
-    "activationEvents": [
-        "onCommand:vscode-generate-code.helloWorld"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "commands": [
-            {
-                "command": "vscode-generate-code.helloWorld",
-                "title": "Hello World"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "lint": "eslint src --ext ts",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile && npm run lint",
-        "test": "node ./out/test/runTest.js"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.47.0",
-        "@types/glob": "^7.1.3",
-        "@types/mocha": "^8.0.0",
-        "@types/node": "^14.0.27",
-        "eslint": "^7.6.0",
-        "@typescript-eslint/eslint-plugin": "^3.8.0",
-        "@typescript-eslint/parser": "^3.8.0",
-        "glob": "^7.1.6",
-        "mocha": "^8.0.1",
-        "typescript": "^3.8.3",
-        "vscode-test": "^1.4.0"
-    },
-    "homepage": "https://github.com/fengtianru117/vscode-generate-code"
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.demo.getCurrentFilePath",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.47.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.27",
+    "eslint": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.0.1",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.4.0"
+  },
+  "homepage": "https://github.com/fengtianru117/vscode-generate-code"
 }
