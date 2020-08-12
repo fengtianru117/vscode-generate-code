@@ -2,7 +2,8 @@
     "name": "vscode-generate-code",
     "displayName": "vscode-generate-code",
     "description": "a tool to generate code",
-    "version": "0.0.1",
+	"version": "0.0.1",
+	"publisher": "fengtianru117",
     "engines": {
         "vscode": "^1.47.0"
     },
