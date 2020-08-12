@@ -19,7 +19,6 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from vscode-generate-code!');
 	});
-
 }
 
 // this method is called when your extension is deactivated
