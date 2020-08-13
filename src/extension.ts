@@ -7,13 +7,9 @@ import { name } from "./menu_demo";
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-
 	console.log('Congratulations, your extension "vscode-generate-code" is now active!');
 
-
 	name(context);
-
-
 
 }
 
