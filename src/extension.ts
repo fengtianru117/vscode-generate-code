@@ -3,18 +3,17 @@
 import * as vscode from 'vscode';
 import { helloWorld } from "./hello_world_demo";
 import { path } from "./menu_when_demo";
+import { editor } from "./editor_demo";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(ctx: vscode.ExtensionContext) {
 
-	console.log('Congratulations, your extension "vscode-generate-code" is now active!');
+	ctx.subscriptions.push(vscode.commands.registerCommand("extension.demo.getCurrentFilePath", (uri) => path(uri))); // menu when
 
-	helloWorld(ctx); // hello world 
-	path(ctx); // menu when
+	ctx.subscriptions.push(vscode.commands.registerCommand('vscode-generate-code.helloWorld', () => helloWorld())); // hello world
 
-	ctx.subscriptions.push(vscode.commands.registerCommand('vscode-generate-code.helloWorld', () => helloWorld(ctx)));
-
+	ctx.subscriptions.push(vscode.commands.registerTextEditorCommand("extension.testEditorCommand", (textEditor, edit) => editor(textEditor, edit)));
 }
 
 // this method is called when your extension is deactivated

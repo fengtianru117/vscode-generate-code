@@ -11,18 +11,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.demo.getCurrentFilePath"
+    "onCommand:extension.demo.getCurrentFilePath",
+    "onCommand:extension.testEditorCommand",
+    "onCommand:vscode-generate-code.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-generate-code.helloWorld",
-        "title": "Hello World"
+        "title": "HelloWorld"
       },
       {
         "command": "extension.demo.getCurrentFilePath",
         "title": "获取当前文件(夹)路径"
+      },
+      {
+        "command": "extension.testEditorCommand",
+        "title": "test editor"
       }
     ],
     "menus": {

@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-export function helloWorld(context: vscode.ExtensionContext) {
+export function helloWorld() {
     console.log('进入了hello world函数');
 
     // let disposable = vscode.commands.registerCommand('vscode-generate-code.helloWorld', () => {
@@ -12,6 +12,6 @@ export function helloWorld(context: vscode.ExtensionContext) {
 
 
     console.log('展示hello world infomation message');
-    const message = '你好世界 hello world';
+    const message = '你好呀世界 hello world';
     vscode.window.showInformationMessage(message);
 };
