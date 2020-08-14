@@ -11,7 +11,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-generate-code.helloWorld"
+    "onCommand:extension.demo.getCurrentFilePath"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,6 +30,13 @@
         {
           "command": "extension.demo.getCurrentFilePath",
           "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "extension.demo.getCurrentFilePath",
+          "group": "navigation@5"
         }
       ]
     }
