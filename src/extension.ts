@@ -13,6 +13,8 @@ export function activate(ctx: vscode.ExtensionContext) {
 	helloWorld(ctx); // hello world 
 	path(ctx); // menu when
 
+	ctx.subscriptions.push(vscode.commands.registerCommand('vscode-generate-code.helloWorld', () => helloWorld(ctx)));
+
 }
 
 // this method is called when your extension is deactivated
